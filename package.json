@@ -1,0 +1,22 @@
+{
+  "name": "@dezzmeister/data-structures",
+  "version": "1.0.0",
+  "description": "Some common data structures, including a HashMap based on logical equality instead of reference equality",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dezzmeister/npm-repos-data-structures.git"
+  },
+  "author": "Joe Desmond",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Dezzmeister/npm-repos-data-structures/issues"
+  },
+  "homepage": "https://github.com/Dezzmeister/npm-repos-data-structures#readme",
+  "dependencies": {
+    "typescript": "^3.9.5"
+  }
+}
