@@ -1,5 +1,24 @@
-import { HashMap } from "../";
-import Num from "../test-objects/TestObjects";
+import { HashMap, Hashable, EqualComparable } from "../";
+
+class Num implements Hashable {
+	public value:number;
+
+	constructor(value: number) {
+		this.value = value;
+	}
+
+	hashcode(): number {
+		return this.value;
+	}
+
+	equals(other: EqualComparable): boolean {
+		if (!(other instanceof Num)) {
+			return false;
+		}
+
+		return (this.value === (other as Num).value);
+	}
+}
 
 test("Collision Test", () => {
 	const map = new HashMap<Num, string>(16, 1.0);
