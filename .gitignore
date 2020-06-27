@@ -1,3 +1,4 @@
 node_modules
 /lib
 /src/wip
+src/test-objects
