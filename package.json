@@ -2,9 +2,14 @@
   "name": "@dezzmeister/data-structures",
   "version": "1.0.0",
   "description": "Some common data structures, including a HashMap based on logical equality instead of reference equality",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+	"lint": "tslint -p tsconfig.json",
+	"prepare": "npm run build",
+	"prepublishOnly": "npm test && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -16,7 +21,12 @@
     "url": "https://github.com/Dezzmeister/npm-repos-data-structures/issues"
   },
   "homepage": "https://github.com/Dezzmeister/npm-repos-data-structures#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "tslint": "^6.1.2",
     "typescript": "^3.9.5"
-  }
+  },
+  "files": [
+	"lib/**/*"
+  ]
 }
