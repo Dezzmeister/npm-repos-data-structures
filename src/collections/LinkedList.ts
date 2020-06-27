@@ -96,14 +96,12 @@ export default class LinkedList<T extends EqualComparable> implements Iterable<T
 
 		if (current === null) {
 			return false;
-		} else if (current.next === null) {
-			if (item.equals(current.item)) {
-				this.root = null;
-				this.size--;
-				return true;
-			} else {
-				return false;
-			}
+		}
+
+		if (item.equals(current.item)) {
+			this.root = current.next;
+			this.size--;
+			return true;
 		}
 
 		while (current.next !== null) {
